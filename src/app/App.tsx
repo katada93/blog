@@ -9,13 +9,12 @@ import './styles/styles.css';
 import { Navbar } from 'widgets/Navbar';
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme()
+  const { theme } = useTheme()
 
   return (
     <div className={clsx('app', theme)}>
       <Navbar />
       <Routing />
-      <button onClick={toggleTheme}>toggle theme</button>
     </div >
   )
 };
