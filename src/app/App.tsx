@@ -7,6 +7,7 @@ import { RouterProvider } from './providers/RouterProvider';
 
 import './styles/styles.css';
 import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
   const { theme } = useTheme()
@@ -14,7 +15,12 @@ const App = () => {
   return (
     <div className={clsx('app', theme)}>
       <Navbar />
-      <Routing />
+      <div className="page-content">
+        <Sidebar />
+        <div className="page-wrapper">
+          <Routing />
+        </div>
+      </div>
     </div >
   )
 };
