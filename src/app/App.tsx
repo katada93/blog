@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
 import { Routing } from 'pages';
 import { ThemeProvider, useTheme } from './providers/ThemeProvider';
 import { RouterProvider } from './providers/RouterProvider';
-
-import './styles/styles.css';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
+import 'shared/config/i18n/i18n';
+
+import './styles/styles.css';
 
 const App = () => {
   const { theme } = useTheme()

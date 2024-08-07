@@ -1,8 +1,10 @@
-import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 function Main() {
+  const { t } = useTranslation('main');
+
   return (
-    <div>Main</div>
+    <div>{t('main')}</div>
   )
 }
 
