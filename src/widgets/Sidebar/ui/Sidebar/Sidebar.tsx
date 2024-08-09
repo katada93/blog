@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 
 import css from './Sidebar.module.css';
+import { Button } from 'shared/ui/Button/Button';
 interface SidebarProps {
   className?: string;
 }
@@ -19,7 +20,7 @@ export const Sidebar = (props: SidebarProps) => {
     <div className={clsx(css.Sidebar, className, {
       [css.collapsed]: collapsed
     })}>
-      <button onClick={toggleCollapsed}>toggle</button>
+      <Button onClick={toggleCollapsed}>toggle</Button>
       <div className={css.switchers}>
         <ThemeSwitcher />
         <LangSwitcher />

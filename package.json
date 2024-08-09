@@ -6,12 +6,17 @@
   "scripts": {
     "start": "webpack serve --env port=3000",
     "build-dev": "webpack --env mode=development",
-    "build-prod": "webpack --env mode=production"
+    "build-prod": "webpack --env mode=production",
+    "lint-ts": "npx eslint .",
+    "lint-ts-fix": "npx eslint . --fix",
+    "lint-css": "npx stylelint \"**/*.css\"",
+    "int-css-fix": "npx stylelint \"**/*.css\" --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.8.0",
     "@svgr/webpack": "^8.1.0",
     "@types/compose-function": "^0.0.33",
     "@types/node": "^20.12.10",
@@ -21,13 +26,19 @@
     "@types/webpack": "^5.28.5",
     "@types/webpack-dev-server": "^4.7.2",
     "css-loader": "^7.1.1",
+    "eslint": "^9.8.0",
+    "eslint-plugin-react": "^7.35.0",
     "file-loader": "^6.2.0",
+    "globals": "^15.9.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.0",
     "style-loader": "^4.0.0",
+    "stylelint": "^16.8.1",
+    "stylelint-config-standard": "^36.0.1",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
+    "typescript-eslint": "^8.0.1",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
