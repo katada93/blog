@@ -10,7 +10,7 @@ import 'shared/config/i18n/i18n';
 import './styles/styles.css';
 
 const App = () => {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   return (
     <div className={clsx('app', theme)}>
@@ -22,7 +22,7 @@ const App = () => {
         </div>
       </div>
     </div >
-  )
+  );
 };
 
 export default () => (

@@ -55,7 +55,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
         presets: ['@babel/preset-env']
       }
     }
-  }
+  };
 
   return [fileLoader, svgLoader, babelLoader, tsLoader, cssLoader];
-}
+};

@@ -14,7 +14,8 @@ export default [
     rules: {
       "react/react-in-jsx-scope": "off",
       "@typescript-eslint/ban-ts-comment": "off",
-      "react/display-name": "off"
+      "react/display-name": "off",
+      "semi": "error",
     }
   },
   {

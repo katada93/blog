@@ -10,7 +10,7 @@ export const useTheme = () => {
 
     setTheme(newTheme);
     localStorage.setItem(LOCALE_STORAGE_THEME_KEY, newTheme);
-  }
+  };
 
-  return { theme, toggleTheme }
-}
+  return { theme, toggleTheme };
+};

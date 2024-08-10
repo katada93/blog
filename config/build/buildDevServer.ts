@@ -7,5 +7,5 @@ export const buildDevServer = ({ port }: BuildOptions): Configuration => {
     open: true,
     hot: true,
     historyApiFallback: true,
-  }
-}
+  };
+};

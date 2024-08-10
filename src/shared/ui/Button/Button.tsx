@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
-import css from './Button.module.css'
+import css from './Button.module.css';
 import clsx from "clsx";
 
 
@@ -10,7 +10,7 @@ interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 }
 
 export const Button = (props: ButtonProps) => {
-  const { className, children, theme, ...otherProps } = props
+  const { className, children, theme, ...otherProps } = props;
 
   return (
     <button
@@ -18,5 +18,5 @@ export const Button = (props: ButtonProps) => {
       {...otherProps}>
       {children}
     </button>
-  )
-}
+  );
+};

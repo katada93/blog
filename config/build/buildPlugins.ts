@@ -19,4 +19,4 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     }),
     new webpack.HotModuleReplacementPlugin()
   ];
-}
+};

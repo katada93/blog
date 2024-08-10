@@ -26,5 +26,5 @@ export const Sidebar = (props: SidebarProps) => {
         <LangSwitcher />
       </div>
     </div>
-  )
-}
+  );
+};

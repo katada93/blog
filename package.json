@@ -10,7 +10,7 @@
     "lint-ts": "npx eslint .",
     "lint-ts-fix": "npx eslint . --fix",
     "lint-css": "npx stylelint \"**/*.css\"",
-    "int-css-fix": "npx stylelint \"**/*.css\" --fix",
+    "lint-css-fix": "npx stylelint \"**/*.css\" --fix",
     "test-unit": "jest --config ./config/jest/jest.config.ts"
   },
   "keywords": [],

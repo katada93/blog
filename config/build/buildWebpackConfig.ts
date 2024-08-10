@@ -26,4 +26,4 @@ export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration
     resolve: buildResolvers(options),
     devServer: isDev ? buildDevServer(options) : undefined,
   };
-}
+};

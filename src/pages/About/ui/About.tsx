@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function About() {
@@ -6,7 +6,7 @@ function About() {
 
   return (
     <div>{t('about')}</div>
-  )
+  );
 }
 
-export default About
+export default About;

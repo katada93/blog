@@ -20,5 +20,5 @@ export const Navbar = (props: NavbarProps) => {
         <AppLink to="/about">{t('navbarLinkAbout')}</AppLink>
       </div>
     </div>
-  )
+  );
 };

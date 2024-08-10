@@ -1,5 +1,5 @@
 import { Link, LinkProps } from 'react-router-dom';
-import css from './AppLink.module.css'
+import css from './AppLink.module.css';
 import clsx from 'clsx';
 
 interface AppLinkProps extends LinkProps {
@@ -18,5 +18,5 @@ export const AppLink = (props: AppLinkProps) => {
       {...otherProps}>
       {children}
     </Link>
-  )
-}
+  );
+};
