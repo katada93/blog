@@ -1,0 +1,1 @@
+export { ErrorBoundary as ErrorProvider } from './ui/ErrorBoundary';

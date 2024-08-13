@@ -1,8 +1,9 @@
 import clsx from 'clsx';
 
 import { Routing } from 'pages';
-import { ThemeProvider, useTheme } from './providers/ThemeProvider';
 import { RouterProvider } from './providers/RouterProvider';
+import { ErrorProvider } from './providers/ErrorProvider';
+import { ThemeProvider, useTheme } from './providers/ThemeProvider';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import 'shared/config/i18n/i18n';
@@ -27,8 +28,10 @@ const App = () => {
 
 export default () => (
   <RouterProvider>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <ErrorProvider>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </ErrorProvider>
   </RouterProvider>
 );
