@@ -1,8 +1,8 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
-import css from './Button.module.css';
 import clsx from "clsx";
 
+import css from './Button.module.css';
 
 interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string;
@@ -14,6 +14,7 @@ export const Button = (props: ButtonProps) => {
 
   return (
     <button
+      data-testid="button"
       className={clsx(css.Button, className, [css[theme]])}
       {...otherProps}>
       {children}

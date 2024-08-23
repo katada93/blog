@@ -1,16 +1,14 @@
 import clsx from 'clsx';
 
 import { Routing } from 'pages';
-import { RouterProvider } from './providers/RouterProvider';
-import { ErrorProvider } from './providers/ErrorProvider';
-import { ThemeProvider, useTheme } from './providers/ThemeProvider';
+import { useTheme } from './providers/ThemeProvider';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import 'shared/config/i18n/i18n';
 
 import './styles/styles.css';
 
-const App = () => {
+export const App = () => {
   const { theme } = useTheme();
 
   return (
@@ -25,13 +23,3 @@ const App = () => {
     </div >
   );
 };
-
-export default () => (
-  <RouterProvider>
-    <ErrorProvider>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </ErrorProvider>
-  </RouterProvider>
-);
