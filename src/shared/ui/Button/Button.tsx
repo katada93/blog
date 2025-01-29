@@ -6,7 +6,7 @@ import css from './Button.module.css';
 
 interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   className?: string;
-  theme?: 'clear';
+  theme?: 'clear' | 'outline';
 }
 
 export const Button = (props: ButtonProps) => {
