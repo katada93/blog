@@ -1,10 +1,11 @@
-import { Loader } from 'shared/ui/Loader';
+import clsx from "clsx";
 
-import css from './PageLoader.module.css';
-import clsx from 'clsx';
+import { Loader } from "shared/ui";
+
+import css from "./PageLoader.module.css";
 
 interface PageLoaderProps {
-  className?: string
+  className?: string;
 }
 
 export const PageLoader = (props: PageLoaderProps) => {

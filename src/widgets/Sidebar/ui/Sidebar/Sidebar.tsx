@@ -1,9 +1,10 @@
 import { useState } from "react";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher";
-import { Button } from "shared/ui/Button/Button";
+import { AppLink, Button } from "shared/ui";
 
 import css from "./Sidebar.module.css";
 
@@ -14,6 +15,7 @@ interface SidebarProps {
 export const Sidebar = (props: SidebarProps) => {
   const { className } = props;
   const [collapsed, setCollapsed] = useState(false);
+  const { t } = useTranslation();
 
   const toggleCollapsed = () => setCollapsed((prev) => !prev);
 
@@ -24,11 +26,28 @@ export const Sidebar = (props: SidebarProps) => {
         [css.collapsed]: collapsed,
       })}
     >
-      <Button data-testid="sidebar-toggle" theme="outline" onClick={toggleCollapsed}>toggle</Button>
-      <div className={css.switchers}>
+      <div className={css.links}>
+        <AppLink to="/" theme="secondary">
+          {t("navbarLinkMain")}
+        </AppLink>
+        <AppLink to="/about" theme="secondary">
+          {t("navbarLinkAbout")}
+        </AppLink>
+      </div>
+      <div
+        className={clsx(css.switchers, collapsed && [css.switchers_collapsed])}
+      >
         <ThemeSwitcher />
         <LangSwitcher />
       </div>
+      <Button
+        className={css.toggle_btn}
+        data-testid="sidebar-toggle"
+        theme="background_inverted"
+        onClick={toggleCollapsed}
+      >
+        {collapsed ? ">" : "<"}
+      </Button>
     </div>
   );
 };

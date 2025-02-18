@@ -2,11 +2,20 @@ import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 
 import clsx from "clsx";
 
-import css from './Button.module.css';
+import css from "./Button.module.css";
 
-interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
+interface ButtonProps
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   className?: string;
-  theme?: 'clear' | 'outline';
+  theme?:
+    | "clear"
+    | "clear_inverted"
+    | "outline"
+    | "background"
+    | "background_inverted";
 }
 
 export const Button = (props: ButtonProps) => {
@@ -16,7 +25,8 @@ export const Button = (props: ButtonProps) => {
     <button
       data-testid="button"
       className={clsx(css.Button, className, [css[theme]])}
-      {...otherProps}>
+      {...otherProps}
+    >
       {children}
     </button>
   );

@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
 
-import { Button } from "shared/ui/Button/Button";
+import { Button } from "shared/ui";
 
-import css from './PageError.module.css';
-
+import css from "./PageError.module.css";
 
 export const PageError = () => {
   const { t } = useTranslation();
@@ -14,9 +13,9 @@ export const PageError = () => {
 
   return (
     <div className={css.ErrorPage}>
-      <p>{t('somethingWentWrong')}</p>
+      <p>{t("somethingWentWrong")}</p>
       <Button onClick={reloadPage} className={css.reloadBtn}>
-        {t('reboot')}
+        {t("reboot")}
       </Button>
     </div>
   );

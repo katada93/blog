@@ -1,9 +1,12 @@
 .Sidebar {
-  background-color:var(--inverted-bg-color);
+  background-color: var(--inverted-bg-color);
   height: calc(100vh - var(--navbar-height));
   position: relative;
   width: var(--sidebar-width);
   transition: width 0.2s;
+  padding: 20px;
+
+  --padding: 20px;
 }
 
 .collapsed {
@@ -12,9 +15,28 @@
 
 .switchers {
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 20px;
   display: flex;
   justify-content: center;
   gap: 16px;
-  width: 100%;
+}
+
+.switchers_collapsed {
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toggle_btn {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  bottom: 20px;
+  right: -45px;
 }

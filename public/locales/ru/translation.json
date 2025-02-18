@@ -4,5 +4,6 @@
   "notFoundPage": "Страница не найдена",
   "somethingWentWrong": "Что-то пошло не так",
   "reboot": "Обновить страницу",
-  "lang": "EN"
+  "lang": "EN",
+  "login": "Войти"
 }

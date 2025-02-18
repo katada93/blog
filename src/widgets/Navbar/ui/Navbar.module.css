@@ -4,11 +4,5 @@
   padding: 10px 20px;
   display: flex;
   align-items: center;
-}
-
-.links {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  justify-content: flex-end;
 }
