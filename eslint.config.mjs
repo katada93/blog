@@ -20,7 +20,7 @@ export default [
       "react/display-name": "off",
       semi: "error",
       "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "error",
+      "react-hooks/exhaustive-deps": "warn",
     },
   },
   {

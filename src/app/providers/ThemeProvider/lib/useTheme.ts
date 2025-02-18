@@ -15,7 +15,7 @@ export const useTheme = () => {
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-  }, []);
+  }, [theme]);
 
   return { theme, toggleTheme };
 };
