@@ -1,10 +1,14 @@
-import { useTranslation } from 'react-i18next';
+import { Counter } from "entities/Counter/ui/Counter";
+import { useTranslation } from "react-i18next";
 
 function Main() {
-  const { t } = useTranslation('main');
+  const { t } = useTranslation("main");
 
   return (
-    <div>{t('main')}</div>
+    <div>
+      <span>{t("main")}</span>
+      <Counter />
+    </div>
   );
 }
 
